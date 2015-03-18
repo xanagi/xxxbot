@@ -15,6 +15,10 @@ module.exports = (robot) ->
 
   robot.hear /PING$/i, (msg) ->
     msg.send "なんのようだなっしー！！！！"
+
+  shogai = ["崖っぷちありがとう！最高だ！！", "これは終わりじゃなくて、新しい修造の始まりだ！", "真剣だからこそ、ぶつかる壁があるんだ！"]
+  robot.hear /障害/, (msg) ->
+    msg.send msg.random shogai
   #
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
