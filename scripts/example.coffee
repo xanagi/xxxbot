@@ -16,9 +16,32 @@ module.exports = (robot) ->
   robot.hear /PING$/i, (msg) ->
     msg.send "なんのようだなっしー！！！！"
 
+  robot.hear /HI$/i, (msg) ->
+    msg.send msg.random ["なんのようだなっしー！！！！", "梨汁ブシャー！！！！", "気安く声かけるななっしー", "業務中です,話しかけないでください", "ふなふなふなふな、ひゃっはー！！！", "こんにちはなっしー", "なんか用があるなっしーか？", "ひゃっはー", "ふなふなふぁいやー"]
+
+  robot.hear /BYE$/i, (msg) ->
+    msg.send msg.random ["お疲れ様でしたなっしー！！", "今日のあんたはよく働いたなっしー！！", "帰ってゆっくり寝るなっしー！！"]
+
+  robot.hear /OMIKUJI$/i, (msg) ->
+    msg.send msg.random ["大吉なっしー!! 後ろから刺されないように気をつけるなっし。", "中吉なっしー!! いい方だけど油断するなよなっしー", "小吉なっしー!! まぁそこそこなっしねードンマイ", "吉なっしー!! ドンマイ！", "末吉なっしー!! 世も末なっしー", "凶なっしー...とりあえず顔を洗ってこいなっしー"]
+
+  robot.hear /ぬるぽ/, (msg) ->
+    msg.send """
+```
+   Λ＿Λ     ＼＼
+（  ・∀・）  | | ｶﾞｯ
+ と     ）  | |
+  Ｙ /ノ     人
+   / ）    < >   _Λ  ∩
+＿/し'   ／／  Ｖ｀Д´）/
+（＿フ彡             / ←>> @#{msg.message.user.name}
+```
+  """
+
   shogai = ["崖っぷちありがとう！最高だ！！", "これは終わりじゃなくて、新しい修造の始まりだ！", "真剣だからこそ、ぶつかる壁があるんだ！"]
-  robot.hear /障害/, (msg) ->
-    msg.send msg.random shogai
+    robot.hear /障害/, (msg) ->
+      msg.send msg.random shogai
+
   #
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
