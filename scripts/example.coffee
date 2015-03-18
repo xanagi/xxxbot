@@ -26,8 +26,8 @@ module.exports = (robot) ->
     msg.send msg.random ["大吉なっしー!! 後ろから刺されないように気をつけるなっし。", "中吉なっしー!! いい方だけど油断するなよなっしー", "小吉なっしー!! まぁそこそこなっしねードンマイ", "吉なっしー!! ドンマイ！", "末吉なっしー!! 世も末なっしー", "凶なっしー...とりあえず顔を洗ってこいなっしー"]
 
   shogai = ["崖っぷちありがとう！最高だ！！", "これは終わりじゃなくて、新しい修造の始まりだ！", "真剣だからこそ、ぶつかる壁があるんだ！"]
-    robot.hear /障害/, (msg) ->
-      msg.send msg.random shogai
+  robot.hear /障害/, (msg) ->
+    msg.send msg.random shogai
 
   #
   # robot.respond /open the (.*) doors/i, (msg) ->
