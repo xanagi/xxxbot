@@ -29,6 +29,18 @@ module.exports = (robot) ->
   robot.hear /障害/, (msg) ->
     msg.send msg.random shogai
 
+  robot.hear /ぬるぽ/, (msg) ->
+    msg.send """
+```
+   Λ＿Λ     ＼＼
+（  ・∀・）  | | ｶﾞｯ
+ と     ）  | |
+  Ｙ /ノ     人
+   / ）    < >   _Λ  ∩
+＿/し'   ／／  Ｖ｀Д´）/
+（＿フ彡             / ←>> @#{msg.message.user.name}
+"""
+
   #
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
